@@ -7,35 +7,35 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-<h1 style=margin-left:430px;>Add Employees</h1>
+<h1 style=margin-left:430px;>Update Details</h1>
 <br>
 <div style=margin-left:30px;>
-    <form action="{% url 'polls:addemp' %}" method="post" style=margin-left:450px;>
+    <form action = "{% url 'polls:Updateemp' obj.id %}" method="post" style=margin-left:450px;>
         {% csrf_token %}
 
         <label for="firstname">First Name</label><br>
-        <input type="text" id="firstname" name="firstname" value="{{ firstname }}"><br>
+        <input type="text" id="firstname" name="firstname" value="{{ obj.firstname }}"><br>
 
         <label for="middlename">Middle Name</label><br>
-        <input type="text" id="middlename" name="middlename" value="{{ middlename }}"><br>
+        <input type="text" id="middlename" name="middlename" value="{{ obj.middlename }}"><br>
 
         <label for="lastname">Last Name</label><br>
-        <input type="text" id="lastname" name="lastname" value="{{ lastname }}"><br>
+        <input type="text" id="lastname" name="lastname" value="{{ obj.lastname }}"><br>
 
         <label for="gender">Gender</label><br>
-        <input type="text" id="gender" name="gender" value="{{ gender }}"><br>
+        <input type="text" id="gender" name="gender" value="{{ obj.gender }}"><br>
 
         <label for="mobile">Mobile</label><br>
-        <input type="number" id="mobile" name="mobile" value="{{ mobile }}"><br>
+        <input type="number" id="mobile" name="mobile" value="{{ obj.mobile }}"><br>
 
         <label for="alt_no">Alternate Number</label><br>
-        <input type="number" id="alt_no" name="alt_no" value="{{ alt_no }}"><br>
+        <input type="number" id="alt_no" name="alt_no" value="{{ obj.alt_no }}"><br>
 
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" value="{{ email }}"><br>
+        <input type="email" id="email" name="email" value="{{ obj.email }}"><br>
 
         <label for="blood">Blood</label><br>
-        <input type="text" id="blood" name="blood" value="{{ blood }}"><br>
+        <input type="text" id="blood" name="blood" value="{{ obj.blood }}"><br>
 
 
         <button type="submit" class="btn btn-primary">Submit</button>

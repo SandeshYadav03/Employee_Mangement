@@ -29,6 +29,8 @@
             <td> {{emp.middlename}}</td>
             <td> {{emp.lastname}}</td>
             <td> {{emp.mobile}}</td>
+            <td><a class="btn btn-primary" href="{% url 'polls:Deleteemp' emp.id %}" role="button">Delete</a>
+            <a class="btn btn-primary" href="{% url 'polls:Updateemp' emp.id %}" role="button">Update</a></td>
         </tr>
         </tbody>
         {% endfor %}
